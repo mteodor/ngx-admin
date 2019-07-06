@@ -21,6 +21,20 @@ import {
   NbWindowModule,
 } from '@nebular/theme';
 
+
+import {
+  MqttModule,
+  IMqttServiceOptions,
+  MqttService,
+} from 'ngx-mqtt';
+
+export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
+  hostname: 'localhost',
+  port: 9001,
+  path: '/mqtt',
+};
+
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -41,6 +55,7 @@ import {
       messageGoogleMapKey: 'AIzaSyA_wNuCzia92MAmdLRzmqitRGvCF7wCZPY',
     }),
     CoreModule.forRoot(),
+    MqttModule.forRoot(MQTT_SERVICE_OPTIONS),
   ],
   bootstrap: [AppComponent],
 })

@@ -6,6 +6,7 @@ import { NbCardModule } from '@nebular/theme';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { MapsRoutingModule, routedComponents } from './maps-routing.module';
+import { MqttService } from 'ngx-mqtt';
 
 @NgModule({
   imports: [
@@ -22,6 +23,8 @@ import { MapsRoutingModule, routedComponents } from './maps-routing.module';
   exports: [],
   declarations: [
     ...routedComponents,
+  ],
+  providers: [
   ],
 })
 export class MapsModule { }
